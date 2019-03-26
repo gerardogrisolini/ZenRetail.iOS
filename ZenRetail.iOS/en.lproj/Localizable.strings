@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  iWebretail
+
+  Created by Gerardo Grisolini on 28/05/18.
+  Copyright © 2018 Gerardo Grisolini. All rights reserved.
+*/
+
+"Cash" = "Cash";
+"Credit card" = "Credit card";
+"Bank transfer" = "Bank transfer";
+"Carrier" = "Carrier";
+"None" = "None";
+
+"New" = "New";
+"Completed" = "Completed";
+
+"Receipt" = "Receipt";
+"NoScanning" = "Scanning not supported";
+"UseDeviceWithCamera" = "Your device does not support scanning barcode. Please use a device with a camera.";
+"RegisterDevice" = "Register your device";
+"Attention" = "Attention";
+"Error" = "Error";
+"Barcode" = "Barcode";
+"NotFound" = "not found!";
+"Cancel" = "Cancel";
+"Date" = "Date";
+"Done" = "Done";
+"nobody" = "nobody";
+"Delete" = "Delete";
+"Edit" = "Edit";
+"ErrorSync" = "Error on sync";
+"store" = "store";
+"causal" = "causal";
+"registry" = "registry";
+"product" = "product";
+"movement" = "movement";
+"Unauthorized" = "Unauthorized";
+"InvalidCredentials" = "Access is denied due to invalid credentials";

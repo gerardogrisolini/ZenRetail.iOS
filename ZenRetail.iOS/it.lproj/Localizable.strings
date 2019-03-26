@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  iWebretail
+
+  Created by Gerardo Grisolini on 28/05/18.
+  Copyright © 2018 Gerardo Grisolini. All rights reserved.
+*/
+
+"Cash" = "Contanti";
+"Credit card" = "Carta di credito";
+"Bank transfer" = "Bonifico bancario";
+"Carrier" = "Corriere";
+"None" = "Nessuno";
+
+"New" = "Nuovo";
+"Completed" = "Completato";
+
+"Receipt" = "Scontrino";
+"NoScanning" = "Scansione non supportata";
+"UseDeviceWithCamera" = "Il tuo dispositivo non supporta la scansione del codice a barre. Si prega di utilizzare un dispositivo con una fotocamera.";
+"RegisterDevice" = "Registra il dipositivo";
+"Attention" = "Attenzione";
+"Error" = "Errore";
+"Barcode" = "Codice a barre";
+"NotFound" = "non trovato!";
+"Cancel" = "Annulla";
+"Date" = "Data";
+"Done" = "Fatto";
+"nobody" = "nessuno";
+"Delete" = "Elimina";
+"Edit" = "Modifica";
+"ErrorSync" = "Errore di sincronizzazione";
+"store" = "negozio";
+"causal" = "causale";
+"registry" = "anagrafiche";
+"product" = "prodotti";
+"movement" = "movementi";
+"Unauthorized" = "Non autorizzato";
+"InvalidCredentials" = "Accesso negato a causa di credenziali non valide";

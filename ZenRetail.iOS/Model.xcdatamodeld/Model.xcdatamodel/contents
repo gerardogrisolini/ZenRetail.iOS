@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Causal" representedClassName="Causal" syncable="YES" codeGenerationType="class">
+        <attribute name="causalBooked" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="causalId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="causalIsPos" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="causalName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="causalQuantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Movement" representedClassName="Movement" syncable="YES" codeGenerationType="class">
+        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementAmount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementCausal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="movementDevice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementNote" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementPayment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementRegistry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementStore" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementUser" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="synced" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MovementArticle" representedClassName="MovementArticle" syncable="YES" codeGenerationType="class">
+        <attribute name="movementArticleBarcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="movementArticleId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementArticlePrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementArticleQuantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movementProduct" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
+        <attribute name="productBrand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productCategories" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productDiscount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="productImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productSelling" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="productUm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ProductArticle" representedClassName="ProductArticle" syncable="YES" codeGenerationType="class">
+        <attribute name="articleAttributes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleBarcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="articleId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Registry" representedClassName="Registry" syncable="YES" codeGenerationType="class">
+        <attribute name="registryAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryFiscalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="registryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryProvince" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryVatNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registryZip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="class">
+        <attribute name="storeAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeCountry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="storeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storeZip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Causal" positionX="-389" positionY="45" width="128" height="135"/>
+        <element name="Movement" positionX="-227" positionY="21" width="128" height="270"/>
+        <element name="MovementArticle" positionX="-54" positionY="18" width="128" height="135"/>
+        <element name="Product" positionX="-693" positionY="90" width="128" height="195"/>
+        <element name="ProductArticle" positionX="-549" positionY="87" width="128" height="105"/>
+        <element name="Registry" positionX="-74" positionY="186" width="128" height="225"/>
+        <element name="Store" positionX="-236" positionY="225" width="128" height="150"/>
+    </elements>
+</model>

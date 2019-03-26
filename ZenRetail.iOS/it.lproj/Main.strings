@@ -1,0 +1,178 @@
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "0n9-SI-OkB"; */
+"0n9-SI-OkB.text" = "Sottotitolo";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "1cc-Xk-SQD"; */
+"1cc-Xk-SQD.text" = "Nome";
+
+/* Class = "UILabel"; text = "€0.00"; ObjectID = "25q-pC-UNu"; */
+"25q-pC-UNu.text" = "€0.00";
+
+/* Class = "UILabel"; text = "Categories"; ObjectID = "2Ae-51-Z3I"; */
+"2Ae-51-Z3I.text" = "Categorie";
+
+/* Class = "UILabel"; text = "Server ip address or domain"; ObjectID = "2ri-1Z-1TA"; */
+"2ri-1Z-1TA.text" = "Indirizzo ip del server o dominio";
+
+/* Class = "UITextField"; placeholder = "Phone"; ObjectID = "3a0-pg-ndV"; */
+"3a0-pg-ndV.placeholder" = "Telefono";
+
+/* Class = "UINavigationItem"; title = "Registries"; ObjectID = "3yE-he-H6D"; */
+"3yE-he-H6D.title" = "Anagrafiche";
+
+/* Class = "UILabel"; text = "123456"; ObjectID = "7HD-wg-eeb"; */
+"7HD-wg-eeb.text" = "123456";
+
+/* Class = "UILabel"; text = "BlueTooth Printer"; ObjectID = "7LD-IZ-twv"; */
+"7LD-IZ-twv.text" = "Stampante BlueTooth";
+
+/* Class = "UITabBarItem"; title = "Barcode"; ObjectID = "A5K-YF-O8u"; */
+"A5K-YF-O8u.title" = "Codice a barre";
+
+/* Class = "UILabel"; text = "€ 100.00"; ObjectID = "CSy-em-eco"; */
+"CSy-em-eco.text" = "€ 100.00";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "Eja-fL-lPY"; */
+"Eja-fL-lPY.text" = "Importo";
+
+/* Class = "UILabel"; text = "Cutting Black Small"; ObjectID = "Ezs-UP-PTq"; */
+"Ezs-UP-PTq.text" = "Cutting Black Small";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "FlR-4x-mA4"; */
+"FlR-4x-mA4.text" = "Prezzo";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "GCY-1r-LaQ"; */
+"GCY-1r-LaQ.normalTitle" = "Fatto";
+
+/* Class = "UITextField"; placeholder = "Fiscal Code"; ObjectID = "I3o-uk-O1z"; */
+"I3o-uk-O1z.placeholder" = "Codice Fiscale";
+
+/* Class = "UIBarButtonItem"; title = "Date"; ObjectID = "IFR-6J-VCD"; */
+"IFR-6J-VCD.title" = "Data";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "IhM-mh-MS5"; */
+"IhM-mh-MS5.text" = "Titolo";
+
+/* Class = "UIBarButtonItem"; title = "Print"; ObjectID = "Jvm-n6-Ydk"; */
+"Jvm-n6-Ydk.title" = "Stampa";
+
+/* Class = "UILabel"; text = "€0.00"; ObjectID = "Lja-IL-8Cm"; */
+"Lja-IL-8Cm.text" = "€0.00";
+
+/* Class = "UITextField"; placeholder = "Causal"; ObjectID = "MHa-Xo-Rin"; */
+"MHa-Xo-Rin.placeholder" = "Causale";
+
+/* Class = "UINavigationItem"; title = "Network"; ObjectID = "NfV-TW-5h8"; */
+"NfV-TW-5h8.title" = "Rete";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ODo-i6-Ycc"; */
+"ODo-i6-Ycc.text" = "Titolo";
+
+/* Class = "UITextField"; placeholder = "Date"; ObjectID = "P2T-da-Nma"; */
+"P2T-da-Nma.placeholder" = "Data";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "RD9-bD-iKH"; */
+"RD9-bD-iKH.placeholder" = "Posta elettronica";
+
+/* Class = "UIButton"; normalTitle = "Save "; ObjectID = "T3v-cN-GM4"; */
+"T3v-cN-GM4.normalTitle" = "Salva";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "TqB-Bf-NR4"; */
+"TqB-Bf-NR4.text" = "Titolo";
+
+/* Class = "UITabBarItem"; title = "Movement"; ObjectID = "VV0-SN-nK6"; */
+"VV0-SN-nK6.title" = "Movimenti";
+
+/* Class = "UILabel"; text = "Quantity"; ObjectID = "ZCh-gM-paJ"; */
+"ZCh-gM-paJ.text" = "Quantità";
+
+/* Class = "UITextField"; placeholder = "Store"; ObjectID = "a6g-oV-MJa"; */
+"a6g-oV-MJa.placeholder" = "Negozio";
+
+/* Class = "UILabel"; text = "Barcode"; ObjectID = "cYC-ll-ZdL"; */
+"cYC-ll-ZdL.text" = "Codice a barre";
+
+/* Class = "UITextField"; text = "50.00"; ObjectID = "cki-hZ-X3C"; */
+"cki-hZ-X3C.text" = "50.00";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "cyr-Yk-VPw"; */
+"cyr-Yk-VPw.placeholder" = "Nome";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "dC7-eY-wBN"; */
+"dC7-eY-wBN.text" = "Sottotitolo";
+
+/* Class = "UILabel"; text = "Printing receipt 1"; ObjectID = "elw-Ca-N9l"; */
+"elw-Ca-N9l.text" = "Stampa scontrio 1";
+
+/* Class = "UITextField"; text = "2"; ObjectID = "fU1-43-cOQ"; */
+"fU1-43-cOQ.text" = "2";
+
+/* Class = "UINavigationItem"; title = "Movements"; ObjectID = "gSJ-E3-gBF"; */
+"gSJ-E3-gBF.title" = "Movimenti";
+
+/* Class = "UITextField"; placeholder = "Number"; ObjectID = "jdm-ra-hPU"; */
+"jdm-ra-hPU.placeholder" = "Numero";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "k5V-jy-C7q"; */
+"k5V-jy-C7q.placeholder" = "Città";
+
+/* Class = "UITextField"; placeholder = "Zip"; ObjectID = "kDL-2h-er0"; */
+"kDL-2h-er0.placeholder" = "CAP";
+
+/* Class = "UILabel"; text = "1234567890"; ObjectID = "khN-PU-iRi"; */
+"khN-PU-iRi.text" = "1234567890";
+
+/* Class = "UITextField"; placeholder = "Payment"; ObjectID = "kix-bl-vOn"; */
+"kix-bl-vOn.placeholder" = "Pagamento";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "lDC-2b-Eiy"; */
+"lDC-2b-Eiy.text" = "Dettaglio";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "lfw-YI-9zk"; */
+"lfw-YI-9zk.text" = "Titolo";
+
+/* Class = "UITextField"; text = "100.00"; ObjectID = "m3m-Yl-xQ6"; */
+"m3m-Yl-xQ6.text" = "100.00";
+
+/* Class = "UIButton"; normalTitle = "Registry"; ObjectID = "ndr-Yh-JmS"; */
+"ndr-Yh-JmS.normalTitle" = "Anagrafica";
+
+/* Class = "UISearchBar"; placeholder = "search by name"; ObjectID = "q3C-Vs-Dxp"; */
+"q3C-Vs-Dxp.placeholder" = "cerca per nome";
+
+/* Class = "UISearchBar"; placeholder = "search by name, code or category"; ObjectID = "rmx-mu-KSb"; */
+"rmx-mu-KSb.placeholder" = "cerca per nome, codice o categoria";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "s4O-tL-fhH"; */
+"s4O-tL-fhH.title" = "Cerca";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "sbW-ri-RhX"; */
+"sbW-ri-RhX.placeholder" = "Indirizzo";
+
+/* Class = "UITextField"; placeholder = "Province"; ObjectID = "sno-f4-ghh"; */
+"sno-f4-ghh.placeholder" = "Provincia";
+
+/* Class = "UILabel"; text = "Completed"; ObjectID = "tkZ-RM-VSF"; */
+"tkZ-RM-VSF.text" = "Completato";
+
+/* Class = "UITextField"; placeholder = "type server address"; ObjectID = "uXk-xW-Iij"; */
+"uXk-xW-Iij.placeholder" = "inserisci indirizzo del server";
+
+/* Class = "UINavigationItem"; title = "Register"; ObjectID = "wiS-Y2-6xm"; */
+"wiS-Y2-6xm.title" = "Registra";
+
+/* Class = "UITextField"; placeholder = "Vat Number"; ObjectID = "xYm-W5-8k7"; */
+"xYm-W5-8k7.placeholder" = "Partita I.V.A.";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "xZJ-1C-kFN"; */
+"xZJ-1C-kFN.placeholder" = "Nazione";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "yDW-Nr-BbY"; */
+"yDW-Nr-BbY.text" = "Importo";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "yGs-3q-77m"; */
+"yGs-3q-77m.text" = "Sottotitolo";
+
+/* Class = "UINavigationItem"; title = "Registry"; ObjectID = "yfj-Ut-13b"; */
+"yfj-Ut-13b.title" = "Anagrafica";
+
