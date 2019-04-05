@@ -261,13 +261,10 @@ extension Movement {
             "movementDevice": self.movementDevice!,
             "movementStore": self.movementStore!.getJSONValues(),
             "movementCausal": self.movementCausal!.getJSONValues(),
+            "movementRegistry": self.movementRegistry?.getJSONValues() ?? Registry().getJSONValues(),
             "movementPayment": self.movementPayment!,
-            "movementItems": items
+            "movementItems" : items
         ] as NSDictionary
-        
-        if self.movementRegistry != nil {
-            response.setValue(self.movementRegistry!.getJSONValues(), forKey: "movementRegistry")
-        }
         
 		return response
 	}

@@ -65,23 +65,19 @@ class Synchronizer {
 
 		makeHTTPGetRequest(url: "api/devicefrom/\(date)", onCompletion: { data in
 			if let usableData = data {
-                DispatchQueue.global(qos: .default).sync {
-				do {
-					let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
-					
-					for item in items {
-						if self.deviceToken == item["deviceToken"] as! String {
-							let store = results.count == 1 ? results.first! : Store(context: self.service.context)
-							store.setJSONValues(json: item["store"] as! NSDictionary)
-							store.updatedAt = item["updatedAt"] as! Int32
-                            DispatchQueue.main.sync {
-                                self.service.save()
-                            }
-						}
-					}
-				} catch {
-					self.service.push(title: "ErrorSync".locale + " " + "store".locale, message: error.localizedDescription)
-				}
+                do {
+                    let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
+                    
+                    for item in items {
+                        if self.deviceToken == item["deviceToken"] as! String {
+                            let store = results.count == 1 ? results.first! : Store(context: self.service.context)
+                            store.setJSONValues(json: item["store"] as! NSDictionary)
+                            store.updatedAt = item["updatedAt"] as! Int32
+                            self.service.save()
+                        }
+                    }
+                } catch {
+                    self.service.push(title: "ErrorSync".locale + " " + "store".locale, message: error.localizedDescription)
                 }
 			}
 
@@ -101,31 +97,27 @@ class Synchronizer {
 		let results = try! service.context.fetch(fetchRequest)
 		let date = results.count == 1 ? results.first!.updatedAt : 1
 		
-		makeHTTPGetRequest(url: "/api/causalfrom/\(date)", onCompletion: { data in
+		makeHTTPGetRequest(url: "api/causalfrom/\(date)", onCompletion: { data in
 			if let usableData = data {
-                DispatchQueue.global(qos: .default).sync {
-				do {
-					let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
-					
-					for item in items {
+                do {
+                    let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
+                    
+                    for item in items {
 
-						let innerFetchRequest: NSFetchRequest<Causal> = Causal.fetchRequest()
-						innerFetchRequest.predicate = NSPredicate.init(format: "causalId == \(item["causalId"] as! Int32)")
-						innerFetchRequest.fetchLimit = 1
-						let object = try self.service.context.fetch(innerFetchRequest)
-						
-						let causal = object.count == 1 ? object.first! : Causal(context: self.service.context)
-						causal.setJSONValues(json: item)
-					}
-				} catch {
-					self.service.push(title: "ErrorSync".locale + " " + "causal".locale, message: error.localizedDescription)
-				}
-				
-                DispatchQueue.main.sync {
-                    self.service.save()
+                        let innerFetchRequest: NSFetchRequest<Causal> = Causal.fetchRequest()
+                        innerFetchRequest.predicate = NSPredicate.init(format: "causalId == \(item["causalId"] as! Int32)")
+                        innerFetchRequest.fetchLimit = 1
+                        let object = try self.service.context.fetch(innerFetchRequest)
+                        
+                        let causal = object.count == 1 ? object.first! : Causal(context: self.service.context)
+                        causal.setJSONValues(json: item)
+                    }
+                } catch {
+                    self.service.push(title: "ErrorSync".locale + " " + "causal".locale, message: error.localizedDescription)
                 }
-                }
-			}
+                
+                self.service.save()
+            }
 			
 			self.syncRegistry()
 		})
@@ -139,9 +131,8 @@ class Synchronizer {
 		let results = try! service.context.fetch(fetchRequest)
 		let date = results.count == 1 ? results.first!.updatedAt : 1
 		
-		makeHTTPGetRequest(url: "/api/registryfrom/\(date)", onCompletion: { data in
+		makeHTTPGetRequest(url: "api/registryfrom/\(date)", onCompletion: { data in
 			if let usableData = data {
-                DispatchQueue.global(qos: .default).sync {
 				do {
 					let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
 					let itemCount = items.count
@@ -156,16 +147,13 @@ class Synchronizer {
 						let registry = object.count == 1 ? object.first! : Registry(context: self.service.context)
 						registry.setJSONValues(json: item)
 
-                        DispatchQueue.main.sync {
-                            self.service.save()
-                        }
+                        self.service.save()
 
                         self.notify(total: itemCount, current: index + 1)
 					}
 				} catch {
 					self.service.push(title: "ErrorSync".locale + " " + "registry".locale, message: error.localizedDescription)
 				}
-                }
             }
 
 			self.syncProducts()
@@ -180,9 +168,8 @@ class Synchronizer {
 		let results = try! service.context.fetch(fetchRequest)
 		let date = results.count == 1 ? results.first!.updatedAt : 1
 		
-		makeHTTPGetRequest(url: "/api/productfrom/\(date)", onCompletion: { data in
+		makeHTTPGetRequest(url: "api/productfrom/\(date)", onCompletion: { data in
             if let usableData = data {
-                DispatchQueue.global(qos: .default).sync {
                 do {
                     let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
                     let itemCount = items.count
@@ -213,16 +200,13 @@ class Synchronizer {
                                 productArticle.productId = product.productId
                             }
                             
-                            DispatchQueue.main.sync {
-                                self.service.save()
-                            }
+                            self.service.save()
                         }
                         
                         self.notify(total: itemCount, current: index + 1)
                     }
                 } catch {
                     self.service.push(title: "ErrorSync".locale + " " + "product".locale, message: error.localizedDescription)
-                }
                 }
             }
             
@@ -251,10 +235,10 @@ class Synchronizer {
         let results = try! service.context.fetch(fetchRequest)
         let date = results.count == 1 ? results.first!.updatedAt : 1
         
-        makeHTTPGetRequest(url: "/api/movementfrom/\(date)", onCompletion: { data in
+        makeHTTPGetRequest(url: "api/movementfrom/\(date)", onCompletion: { data in
             if let usableData = data {
-                DispatchQueue.global(qos: .default).sync {
                 do {
+                    //print(String(data: usableData, encoding: .utf8)!)
                     let items = try JSONSerialization.jsonObject(with: usableData, options: .allowFragments) as! [NSDictionary]
                     let itemCount = items.count
                     
@@ -304,15 +288,12 @@ class Synchronizer {
                             movementArticle.setJSONValues(json: article)
                         }
                         
-                        DispatchQueue.main.sync {
-                            self.service.save()
-                        }
+                        self.service.save()
 
                         self.notify(total: itemCount, current: index + 1)
                     }
                 } catch {
                     self.service.push(title: "ErrorSync".locale + " " + "movement".locale, message: error.localizedDescription)
-                }
                 }
             }
             
@@ -428,8 +409,6 @@ class Synchronizer {
 		let notification = ProgressNotification()
 		notification.total = total
 		notification.current = current
-		DispatchQueue.main.async {
-			NotificationCenter.default.post(name: NSNotification.Name(rawValue: kProgressUpdateNotification), object: notification)
-		}
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kProgressUpdateNotification), object: notification)
 	}
 }

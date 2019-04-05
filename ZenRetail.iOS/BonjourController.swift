@@ -45,7 +45,12 @@ class BonjourController: UIViewController, NetServiceBrowserDelegate, NetService
     }
     
     @IBAction func saveClick(_ sender: UIButton) {
-        Synchronizer.shared.registerServer(baseURL: "https://\(server!.text!)/")
+        #if DEBUG
+        let url = "http://\(server!.text!):8080/"
+        #else
+        let url = "https://\(server!.text!)/"
+        #endif
+        Synchronizer.shared.registerServer(baseURL: url)
         self.navigationController?.popViewController(animated: true)
     }
     
