@@ -154,7 +154,7 @@ class MovementController: UIViewController, UITableViewDataSource, UITableViewDe
         return !Synchronizer.shared.movement.completed
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             do {
                 try repository.delete(id: self.movementArticles[indexPath.row].movementArticleId)

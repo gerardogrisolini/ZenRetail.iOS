@@ -97,8 +97,8 @@ class RegisterController: UIViewController, UIPickerViewDataSource, UIPickerView
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
-		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
 		let movement = Synchronizer.shared.movement!
 		if movement.movementRegistry != nil {
@@ -107,18 +107,18 @@ class RegisterController: UIViewController, UIPickerViewDataSource, UIPickerView
 	}
 
 	override func viewWillDisappear(_ animated: Bool) {
-		NotificationCenter.default.removeObserver(self,name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-		NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+		NotificationCenter.default.removeObserver(self,name: UIResponder.keyboardWillShowNotification, object: nil)
+		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
 	
 	@IBAction func dateFieldEditing(_ sender: UITextField) {
         if Synchronizer.shared.movement.completed { return }
         
 		let datePickerView = UIDatePicker()
-		datePickerView.datePickerMode = UIDatePickerMode.date
+		datePickerView.datePickerMode = UIDatePicker.Mode.date
 		datePickerView.timeZone = TimeZone(abbreviation: "UTC")
 		sender.inputView = datePickerView
-		datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: UIControlEvents.valueChanged)
+		datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: UIControl.Event.valueChanged)
 	}
 	
 	@IBAction func causalFieldEditing(_ sender: UITextField) {
@@ -163,7 +163,7 @@ class RegisterController: UIViewController, UIPickerViewDataSource, UIPickerView
 	// MARK: - Keyboard
 	
     @objc func keyboardWillShow(notification: NSNotification) {
-		if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+		if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
 			var frame: CGRect
 			if numberTextField.isFirstResponder {
 				frame = numberTextField.frame

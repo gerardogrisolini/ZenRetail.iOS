@@ -121,7 +121,7 @@ class BonjourController: UIViewController, NetServiceBrowserDelegate, NetService
     }
 
     public func netServiceBrowser(_ browser: NetServiceBrowser, didRemove service: NetService, moreComing: Bool) {
-        if let ix = self.services.index(of:service) {
+        if let ix = self.services.firstIndex(of:service) {
             self.services.remove(at:ix)
             print("removing a service")
             if !moreComing {

@@ -27,7 +27,7 @@ class ServiceRepository: ServiceProtocol {
 				let content = UNMutableNotificationContent()
 				content.title = title
 				content.body = message
-				content.sound = UNNotificationSound.default()
+				content.sound = UNNotificationSound.default
 				content.categoryIdentifier = "message"
 				//content.badge = UIApplication.shared.applicationIconBadgeNumber + 1 as NSNumber
 				let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1, repeats: false)

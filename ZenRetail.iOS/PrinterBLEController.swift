@@ -104,6 +104,9 @@ class PrinterBLEController: UIViewController, CBCentralManagerDelegate, CBPeriph
         case CBManagerState.unsupported:
             messageView.text = "Bluetooth: Unsupported"
             break
+        default:
+            messageView.text = ""
+            break
         }
         activityView.stopAnimating()
     }

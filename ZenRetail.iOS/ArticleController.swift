@@ -45,13 +45,13 @@ class ArticleController: UITableViewController, UISearchBarDelegate {
             options: [],
             progressBlock: { receivedSize, totalSize in
             },
-            completionHandler: { image, error, cacheType, imageURL in
+            completionHandler: { result in
                 self.vBounceHeader.updateImageView()
             }
         )
         
-        self.vBounceHeader.bringSubview(toFront: self.searchBar)
-        self.vBounceHeader.bringSubview(toFront: self.buttonDone)
+        self.vBounceHeader.bringSubviewToFront(self.searchBar)
+        self.vBounceHeader.bringSubviewToFront(self.buttonDone)
         
         //navigationItem.title = product.productName
 		searchBar.delegate = self
@@ -110,7 +110,7 @@ class ArticleController: UITableViewController, UISearchBarDelegate {
 			let barcode = filtered[indexPath.row].articleBarcode!
 			if cell.accessoryType == .checkmark {
 				cell.accessoryType = .none
-				let index = barcodes.index(of: barcode)
+				let index = barcodes.firstIndex(of: barcode)
 				barcodes.remove(at: index!)
 			} else {
 				cell.accessoryType = .checkmark

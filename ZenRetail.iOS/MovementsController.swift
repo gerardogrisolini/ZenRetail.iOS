@@ -35,11 +35,11 @@ class MovementsController: UITableViewController {
 
 		datePickerView = UIDatePicker()
 		datePickerView.backgroundColor = UIColor.init(name: "lightgray")
-		datePickerView.datePickerMode = UIDatePickerMode.date
+		datePickerView.datePickerMode = UIDatePicker.Mode.date
 		datePickerView.timeZone = TimeZone(abbreviation: "UTC")
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
 
-		self.refreshControl?.addTarget(self, action: #selector(synchronize), for: UIControlEvents.valueChanged)
+		self.refreshControl?.addTarget(self, action: #selector(synchronize), for: UIControl.Event.valueChanged)
 	}
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -158,7 +158,7 @@ class MovementsController: UITableViewController {
         return true
     }
 	
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
 			do {
 				try repository.delete(id: filtered[indexPath.section].value[indexPath.row].movementId)
